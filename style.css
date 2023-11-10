@@ -1,0 +1,18 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    color: black;
+    text-align: center; /* Center text within the body */
+    background-image: url('pizzas.jpg'); /* Set the background image */
+    background-size: cover; 
+}
+#pizzaImg {
+    display: block;
+    margin: 0 auto; /* Center image horizontally */
+    opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
+    transition: opacity 1.5s; /* Apply transition effect for opacity change */
+}
+#pricePerSliceOutput {
+    font-size: 15em; /* Adjust the font size as desired */
+    margin-top: 20px; /* Adjust the top margin to center it vertically */
+    text-align: center;
+}

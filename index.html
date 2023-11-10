@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Lab - P DeNardis</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <img id="pizzaImg" src="pizza.jpg" alt="Pizza Image" style="width: 200px; height: auto;">
+
+    <script language="JavaScript" type="text/javascript">
+    
+        var pizzaSize;
+        var pizzaPrice;
+        var slices;
+
+        pizzaSize = prompt("Enter size of pizza (diameter in inches)", "12");
+        pizzaPrice = prompt("Enter price of pizza as a decimal (no $ sign)", "9.99");
+
+        pizzaSize = parseInt(pizzaSize);
+        pizzaPrice = parseFloat(pizzaPrice);
+
+        slices = prompt("Enter the number of slices you want", "8");
+        slices = parseInt(slices);
+
+        var radius = (pizzaSize / 2.0);
+        var area = Math.PI * radius * radius;
+        var priceNoRound = pizzaPrice / area;
+        var pricePerSquareInch = priceNoRound.toFixed(2);
+
+        var pricePerSlice = pizzaPrice / slices;
+        pricePerSlice = pricePerSlice.toFixed(2);
+
+        document.write("<p><id='pricePerSliceOutput'> The price per slice is: $" + pricePerSlice + "</p>");
+        setTimeout(function() {
+            var pizzaImg = document.getElementById('pizzaImg');
+            pizzaImg.style.width = "400px"; // Set width to 400px (adjust as needed)
+            pizzaImg.style.opacity = 1; // Set opacity to 1 for the fade-in effect
+        }, 2000); // Adjust the delay (2000ms = 2 seconds) as needed
+    </script>
+</body>
+</html>
